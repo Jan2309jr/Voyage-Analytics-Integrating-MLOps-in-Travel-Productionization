@@ -11,6 +11,9 @@ class HotelModelTrainer:
         os.makedirs(self.model_dir, exist_ok=True)
 
     def train(self, df: pd.DataFrame):
+        if "high_demand" not in df.columns:
+            raise ValueError("Target column 'high_demand' not found")
+
         X = df.drop(columns=["high_demand"])
         y = df["high_demand"]
 

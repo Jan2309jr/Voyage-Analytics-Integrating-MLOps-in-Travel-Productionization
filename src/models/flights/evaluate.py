@@ -1,5 +1,6 @@
 import json
 import os
+import numpy as np
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 
@@ -11,9 +12,12 @@ class FlightModelEvaluator:
     def evaluate(self, model, X_test, y_test):
         preds = model.predict(X_test)
 
+        mse = mean_squared_error(y_test, preds)
+        rmse = np.sqrt(mse)
+
         metrics = {
             "MAE": mean_absolute_error(y_test, preds),
-            "RMSE": mean_squared_error(y_test, preds, squared=False),
+            "RMSE": rmse,
         }
 
         with open(

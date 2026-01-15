@@ -1,0 +1,16 @@
+2026-01-15 15:11:38,174 - INFO - Starting flight pipeline
+2026-01-15 15:15:38,511 - INFO - Starting flight pipeline
+2026-01-15 15:18:16,058 - INFO - Flight pipeline completed successfully
+2026-01-15 15:18:16,079 - INFO - Starting hotel pipeline
+2026-01-15 15:18:20,693 - INFO - Starting flight pipeline
+2026-01-15 15:20:44,160 - INFO - Flight pipeline completed successfully
+2026-01-15 15:20:44,191 - INFO - Starting hotel pipeline
+2026-01-15 15:21:15,397 - INFO - Starting flight pipeline
+2026-01-15 15:23:08,124 - INFO - Flight pipeline completed successfully
+2026-01-15 15:23:08,146 - INFO - Starting hotel pipeline
+2026-01-15 15:26:15,984 - INFO - Starting flight pipeline
+2026-01-15 15:29:48,103 - INFO - Flight pipeline completed successfully
+2026-01-15 15:29:48,129 - INFO - Starting hotel pipeline
+2026-01-15 15:29:50,544 - INFO - Hotel pipeline completed successfully
+2026-01-15 15:29:50,555 - INFO - Starting user pipeline
+2026-01-15 15:29:53,367 - INFO - User pipeline completed successfully
