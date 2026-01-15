@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voyage-flight-api
+spec:
+  replicas: 3   # scalability: 3 pods
+  selector:
+    matchLabels:
+      app: voyage-flight-api
+  template:
+    metadata:
+      labels:
+        app: voyage-flight-api
+    spec:
+      containers:
+        - name: flight-api-container
+          image: voyage-flight-api:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
