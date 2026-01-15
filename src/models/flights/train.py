@@ -1,5 +1,7 @@
 import os
 import joblib
+import mlflow
+import mlflow.sklearn
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
@@ -18,12 +20,18 @@ class FlightModelTrainer:
             X, y, test_size=0.2, random_state=42
         )
 
-        model = RandomForestRegressor(
-            n_estimators=100, random_state=42
-        )
-        model.fit(X_train, y_train)
+        with mlflow.start_run(run_name="flight_price_regression"):
+            model = RandomForestRegressor(
+                n_estimators=100, random_state=42
+            )
+            model.fit(X_train, y_train)
 
-        model_path = os.path.join(self.model_dir, "flight_model_v1.pkl")
-        joblib.dump(model, model_path)
+            # Log model
+            mlflow.sklearn.log_model(model, "flight_model")
+
+            model_path = os.path.join(
+                self.model_dir, "flight_model_v1.pkl"
+            )
+            joblib.dump(model, model_path)
 
         return model, X_test, y_test

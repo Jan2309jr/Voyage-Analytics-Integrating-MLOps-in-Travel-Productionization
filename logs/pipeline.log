@@ -14,3 +14,4 @@
 2026-01-15 15:29:50,544 - INFO - Hotel pipeline completed successfully
 2026-01-15 15:29:50,555 - INFO - Starting user pipeline
 2026-01-15 15:29:53,367 - INFO - User pipeline completed successfully
+2026-01-15 17:38:20,512 - INFO - Starting flight pipeline
