@@ -54,6 +54,13 @@ pytest
 - Data drift detection
 - Reproducible artifacts
 
+## Ethical Note
+The gender classification model included in this project is a
+demonstration-only component using synthetic data. It is not intended
+for real-world deployment. Gender inference from behavioral data raises
+ethical and privacy concerns and must be handled with caution in
+production systems.
+
 ## Future Enhancements
 - CI/CD integration
 - Real-time inference APIs
