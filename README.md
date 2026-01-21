@@ -1,4 +1,4 @@
-# Voyage Analytics – Integrating MLOps in Travel
+# Voyage Analytics - Integrating MLOps in Travel
 
 ## Overview
 Voyage Analytics is an end-to-end MLOps project that demonstrates how
